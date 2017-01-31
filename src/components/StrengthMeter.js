@@ -6,7 +6,12 @@ class StrengthMeter extends Component {
   }
 
   render() {
-    return null;
+    return (
+        <div>
+          <h5>A good password is:</h5>
+          <PrinciplesList {...this.props} />
+        </div>
+    )
   }
 }
 

@@ -6,13 +6,22 @@ import { Grid } from 'semantic-ui-react';
 class PasswordInput extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      password: ''
+    }
   }
 
   render() {
+    const { goodPasswordPrinciples } = this.props;
+    const { password } = this.state;
+
     return (
         <Grid>
-          <StrengthMeter />
           <PasswordField />
+          <StrengthMeter
+              principles={goodPasswordPrinciples}
+              password={password}
+          />
         </Grid>
     );
   }

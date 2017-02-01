@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
+import PrinciplesList from './PrinciplesList';
 
 class StrengthMeter extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
         <div>

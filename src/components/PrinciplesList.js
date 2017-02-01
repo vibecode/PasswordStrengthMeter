@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
+import classNames from 'classnames';
 
 class PrinciplesList extends Component {
   satisfiesPrinciple(principle) {
-    let {password} = this.props;
+    const {password} = this.props;
 
     return principle.predicate(password);
   }
 
   principleClass(principle) {
-    let satisfied = this.satisfiesPrinciple(principle);
+    const satisfied = this.satisfiesPrinciple(principle);
 
     return classNames({
       ["text-success"]: satisfied,
@@ -17,7 +18,7 @@ class PrinciplesList extends Component {
   }
 
   render() {
-    let {principles} = this.props;
+    const {principles} = this.props;
     console.log(this.props);
     console.log(principles);
     return (

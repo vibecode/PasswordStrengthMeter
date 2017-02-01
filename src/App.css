@@ -1,24 +1,23 @@
-.App {
-  text-align: center;
+.formContainer {
+  margin-top: 100px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.text-success {
+  color: #21BA45;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.text-danger {
+  color: #DB2828;
 }
 
-.App-intro {
-  font-size: large;
+.input-error input {
+  border-color: #DB2828 !important;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.input-success input {
+  border-color: #21BA45 !important;
+}
+
+.input-warning input {
+  border-color: #FBBD08 !important;
 }

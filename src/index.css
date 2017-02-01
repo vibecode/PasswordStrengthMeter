@@ -8,15 +8,3 @@ ul {
   list-style-position: inside;
   padding-left: 0;
 }
-
-.formContainer {
-  margin-top: 100px;
-}
-
-.text-success {
-  color: #21BA45;
-}
-
-.text-danger {
-  color: #DB2828;
-}

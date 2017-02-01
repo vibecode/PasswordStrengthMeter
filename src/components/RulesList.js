@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 
 class PrinciplesList extends Component {
+  constructor(props) {
+    super(props);
+    this.getClassByStatus = this.getClassByStatus.bind(this);
+  }
+
   satisfiesRule(rule) {
     const {password} = this.props;
 
@@ -12,8 +17,8 @@ class PrinciplesList extends Component {
     const satisfied = this.satisfiesRule(rule);
 
     return classNames({
-      ['text-success']: satisfied,
-      ['text-danger']: !satisfied
+      'text-success': satisfied,
+      'text-danger': !satisfied
     });
   }
 
@@ -22,8 +27,8 @@ class PrinciplesList extends Component {
 
     return (
           <ul>
-            {rules.map((rule) =>
-                <li className={this.getClassByStatus(rule)}>
+            {rules.map((rule, i) =>
+                <li key={i} className={this.getClassByStatus(rule)}>
                   <small>{rule.label}</small>
                 </li>
             )}

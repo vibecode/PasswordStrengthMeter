@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import StrengthMeter from './components/StrengthMeter';
-import './App.css';
+import PasswordInput from './components/PasswordInput';
 
 class App extends Component {
   render() {
     return (
-      <StrengthMeter />
+      <PasswordInput />
     );
   }
 }

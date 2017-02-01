@@ -11,17 +11,27 @@ class PasswordInput extends Component {
     }
   }
 
+  changePassword(password) {
+    this.setState({password});
+  }
+
   render() {
-    const { goodPasswordPrinciples } = this.props;
-    const { password } = this.state;
+    const {goodPasswordPrinciples} = this.props;
+    const {password} = this.state;
 
     return (
         <Grid>
-          <PasswordField />
-          <StrengthMeter
-              principles={goodPasswordPrinciples}
-              password={password}
-          />
+          <Grid.Row>
+            <PasswordField
+                password={password}
+                onPasswordChange={(e) => this.changePassword(e)}
+                principles={goodPasswordPrinciples}
+            />
+            <StrengthMeter
+                principles={goodPasswordPrinciples}
+                password={password}
+            />
+          </Grid.Row>
         </Grid>
     );
   }

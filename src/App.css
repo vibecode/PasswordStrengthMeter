@@ -21,3 +21,8 @@
 .input-warning input {
   border-color: #FBBD08 !important;
 }
+
+.bar {
+  transition: width .8s ease,
+  background-color .8s ease !important;
+}

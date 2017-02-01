@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Input } from 'semantic-ui-react';
-import { calcPrinciplesPercents, changeStyleOnPercentage } from '../helpers';
+import { calcRulesPercents, getStatus } from '../helpers';
 
 class PasswordField extends Component {
   constructor(props) {
@@ -14,10 +14,18 @@ class PasswordField extends Component {
 
   render() {
     const { password } = this.props;
-    const percentage = calcPrinciplesPercents(this.props);
+    const percentage = calcRulesPercents(this.props);
+    const  status = getStatus(percentage);
+
+    const statusColors = {
+      'ERROR' : 'red',
+      'SUCCESS': 'green',
+      'WARNING': 'yellow'
+    };
 
     return (
       <Input
+          fluid
           type='password'
           value={password}
           label='Password'

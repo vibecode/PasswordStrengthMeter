@@ -1,26 +1,26 @@
-export const calcPrinciplesPercents = (props) => {
-  const {principles, password} = props;
+export const calcRulesPercents = (props) => {
+  const {rules, password} = props;
 
-  const principleResults = principles
-      .map(principle => principle.predicate(password));
+  const rulesResults = rules
+      .map(rule => rule.predicate(password));
 
-  const passedPrinciples = principleResults
+  const passedRules = rulesResults
       .reduce((acc, result) => acc + (result ? 1 : 0), 0);
 
   return Math
-      .round((passedPrinciples / principleResults.length) * 100.0
+      .round((passedRules / rulesResults.length) * 100.0
   );
 };
 
-export const changeStyleOnPercentage = (percentage) => {
+export const getStatus = (percentage) => {
 
   if (percentage <= 33) {
-    return 'error';
+    return 'ERROR';
   }
 
   if (percentage > 67) {
-    return 'success';
+    return 'SUCCESS';
   }
 
-  return 'warning';
+  return 'WARNING';
 };

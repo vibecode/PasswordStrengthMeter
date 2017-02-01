@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import PrinciplesList from './PrinciplesList';
-import PrinciplesProgress from './PrinciplesProgress'
+import PrinciplesList from './RulesList';
+import PrinciplesProgress from './RulesProgress'
 
 class StrengthMeter extends Component {
   render() {

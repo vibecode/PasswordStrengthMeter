@@ -16,23 +16,31 @@ class PasswordInput extends Component {
   }
 
   render() {
-    const {goodPasswordPrinciples} = this.props;
+    const {goodPasswordRules} = this.props;
     const {password} = this.state;
 
     return (
-        <Grid>
-          <Grid.Row>
-            <PasswordField
-                password={password}
-                onPasswordChange={(e) => this.changePassword(e)}
-                principles={goodPasswordPrinciples}
-            />
-            <StrengthMeter
-                principles={goodPasswordPrinciples}
-                password={password}
-            />
-          </Grid.Row>
-        </Grid>
+        <div className='formContainer'>
+          <Grid centered columns={3}>
+            <Grid.Row>
+              <Grid.Column>
+                <PasswordField
+                    password={password}
+                    onPasswordChange={(e) => this.changePassword(e)}
+                    rules={goodPasswordRules}
+                />
+              </Grid.Column>
+            </Grid.Row>
+            <Grid.Row>
+              <Grid.Column>
+                <StrengthMeter
+                    rules={goodPasswordRules}
+                    password={password}
+                />
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
+        </div>
     );
   }
 }
@@ -41,7 +49,7 @@ const SPECIAL_CHARS_REGEX = /[^A-Za-z0-9]/;
 const DIGIT_REGEX = /[0-9]/;
 
 PasswordInput.defaultProps = {
-  goodPasswordPrinciples: [
+  goodPasswordRules: [
     {
       label: "6+ characters",
       predicate: (input) => input.length >= 6

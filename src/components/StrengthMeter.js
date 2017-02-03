@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import PrinciplesList from './RulesList';
-import PrinciplesProgress from './RulesProgress'
+import RulesProgress from './RulesProgress';
+import RulesList from './RulesList';
 
 class StrengthMeter extends Component {
   render() {
     return (
         <div>
-          <PrinciplesProgress {...this.props} />
+          <RulesProgress {...this.props} />
           <h5>A good password is:</h5>
-          <PrinciplesList {...this.props} />
+          <RulesList {...this.props} />
         </div>
     )
   }

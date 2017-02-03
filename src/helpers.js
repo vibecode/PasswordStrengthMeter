@@ -9,7 +9,7 @@ export const calcRulesPercents = (props) => {
 
   return Math
       .round((passedRules / rulesResults.length) * 100.0
-  );
+      );
 };
 
 export const getStatus = (percentage) => {
@@ -24,3 +24,4 @@ export const getStatus = (percentage) => {
 
   return 'WARNING';
 };
+

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 
-class PrinciplesList extends Component {
+class RulesList extends Component {
   constructor(props) {
     super(props);
     this.getClassByStatus = this.getClassByStatus.bind(this);
@@ -37,4 +37,4 @@ class PrinciplesList extends Component {
   }
 }
 
-export default PrinciplesList;
+export default RulesList;

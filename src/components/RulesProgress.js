@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Progress } from 'semantic-ui-react';
 import { calcRulesPercents, getStatus } from '../helpers';
 
-class PrinciplesProgress extends Component {
+class RulesProgress extends Component {
 
   render() {
     const percentage = calcRulesPercents(this.props);
@@ -23,4 +23,4 @@ class PrinciplesProgress extends Component {
   }
 }
 
-export default PrinciplesProgress;
+export default RulesProgress;
